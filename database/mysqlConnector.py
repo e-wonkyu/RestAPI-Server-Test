@@ -9,7 +9,6 @@ class MysqlConnector:
         parser = JsonConfigParser('database/database.json')
         conf = parser.readJsonConfig()
 
-        # {'datasource': {'address': 'localhost', 'user': 'root', 'password': 'Dnjsrb96$$', 'port': '3306'}}
         if not conf:
             return None
         datasource = parser.jsondata['datasource']

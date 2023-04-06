@@ -1,0 +1,8 @@
+{
+  "datasource": {
+    "address": "localhost",
+    "user": "root",
+    "password": "_",
+    "port": "3306"
+  }
+}

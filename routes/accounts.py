@@ -23,12 +23,18 @@ def methodForm():
 
 @account.route('/register',methods=['GET','POST','PUT','GET'])
 def register():
+   email = ''
+   password = ''
+   name = ''
    method = request.method
+
    try:
       if method == 'POST':
          1
       elif method == 'GET':
-        2
+         email = request.args.get('email', '')
+         password = request.args.get('password', '')
+         name = request.args.get('name', '')
       elif method == 'PUT':
          3
       elif method == 'DELETE':

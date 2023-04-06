@@ -1,6 +1,9 @@
+import logging
+
 from flask import Flask, Response, request
 
 from routes import accounts
+from util.logging import Log
 
 app = Flask(__name__)
 
@@ -9,14 +12,12 @@ app = Flask(__name__)
 """
 app.register_blueprint(accounts.account)
 
-
+logger = Log()
 @app.route('/')
 def index():
+    logger.info('/ path Request',request)
     resp = Response('{"test":"test"}',status=200,mimetype='application/json')
     return resp
-
-
-
 
 
 """
@@ -26,7 +27,6 @@ def index():
 
 if __name__ == '__main__':
     app.run()
-
 
 
 """
